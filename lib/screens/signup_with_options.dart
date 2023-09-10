@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:on_property/components/social_media_button.dart';
 import 'package:on_property/widgets/custom_button.dart';
 
 class SignUpWithOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -13,7 +13,6 @@ class SignUpWithOptions extends StatelessWidget {
         decoration: BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.fitHeight,
-
                 image: AssetImage('assets/images/apartement.jpg'))),
         child: Container(
             color: Colors.black.withOpacity(0.4), child: mainBody(context)),
@@ -30,20 +29,16 @@ class SignUpWithOptions extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.15,
           ),
-
           Text(
             'Hello There ',
             style: TextStyle(
                 color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
           ),
-
           SizedBox(
             height: 5,
           ),
-
           Text('Let\'s Sign Up To Continue',
               style: TextStyle(color: Colors.white)),
-
           Container(
             height: 5,
             width: 70,
@@ -51,7 +46,6 @@ class SignUpWithOptions extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20), color: Colors.white),
           ),
-
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.40,
           ),
@@ -61,15 +55,18 @@ class SignUpWithOptions extends StatelessWidget {
             children: [
               socialMediaButton(
                   img: 'assets/icons/google.png',
-                  callback: () {},
+                  callback: () {
+                    Fluttertoast.showToast(msg: "Coming Soon");
+                  },
                   text: 'Google'),
               socialMediaButton(
                   img: 'assets/icons/fb.png',
-                  callback: () {},
+                  callback: () {
+                    Fluttertoast.showToast(msg: "Coming Soon");
+                  },
                   text: 'Facebook'),
             ],
           ),
-
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
           ),
@@ -82,10 +79,13 @@ class SignUpWithOptions extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.02,
           ),
 
-         /* ........................Container for Sign up with email or phone....................*/
-          CustomButton(title:  'Sign Up With Email or Phone',callback:() {
-            Navigator.pushNamed(context, 'SignUp');
-          }, ),
+          /* ........................Container for Sign up with email or phone....................*/
+          CustomButton(
+            title: 'Sign Up With Email',
+            callback: () {
+              Navigator.pushNamed(context, 'SignUp');
+            },
+          ),
           Spacer(),
           Padding(
             padding: const EdgeInsets.only(bottom: 28.0),
@@ -115,6 +115,4 @@ class SignUpWithOptions extends StatelessWidget {
       ),
     );
   }
-
-
 }

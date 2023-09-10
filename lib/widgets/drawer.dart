@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:on_property/utils/colorscheme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -55,7 +56,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       height: 10.0,
                     ),
                     Text(
-                      'John Smith',
+                      'Harsh Bhanderi',
                       style: TextStyle(
                           fontSize: 16,
                           color: Colors.black,
@@ -65,7 +66,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       height: 2.0,
                     ),
                     Text(
-                      'Orlando Real Estate',
+                      'Bhanderi Real Estate',
                       style: TextStyle(fontSize: 12, color: Colors.black54),
                     )
                   ],
@@ -97,13 +98,14 @@ class _CustomDrawerState extends State<CustomDrawer> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DashBoard(
-                              page: 1,
-                            )),
-                  );
+                  // Navigator.pushReplacement(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //       builder: (context) => DashBoard(
+                  //             page: 1,
+                  //           )),
+                  // );
+                  Fluttertoast.showToast(msg: "Coming Soon");
                 },
                 child: Container(
                   height: 40,
@@ -132,10 +134,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => DashBoard(page: 2)),
-                  );
+                  // Navigator.pushReplacement(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => DashBoard(page: 2)),
+                  // );
+                  Fluttertoast.showToast(msg: "Coming Soon");
                 },
                 child: Container(
                   height: 40,
@@ -231,13 +234,14 @@ class _CustomDrawerState extends State<CustomDrawer> {
   drawerTile({String? title, String? svgIconLoc, String? routeName}) {
     return GestureDetector(
       onTap: () async {
-        if (routeName == "SignIn") {
-          SharedPreferences prefs = await SharedPreferences.getInstance();
-          await prefs.clear();
-          Navigator.pushNamed(context, routeName!);
-        } else {
-          Navigator.pushNamed(context, routeName!);
-        }
+        // if (routeName == "SignIn") {
+        //   SharedPreferences prefs = await SharedPreferences.getInstance();
+        //   await prefs.clear();
+        //   Navigator.pushNamed(context, routeName!);
+        // } else {
+        //   Navigator.pushNamed(context, routeName!);
+        // }
+        Fluttertoast.showToast(msg: "Coming Soon");
       },
       child: Container(
         height: 40,

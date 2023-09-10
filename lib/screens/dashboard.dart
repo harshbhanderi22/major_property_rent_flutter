@@ -73,7 +73,7 @@ class _DashBoardState extends State<DashBoard> {
                 setState(() {
                   currentScreen = Home();
                   _currentTab = 0;
-                  title = 'Hello, John Smith';
+                  title = 'Hello, Harsh Bhanderi';
                 });
               },
               child: Container(
@@ -113,7 +113,11 @@ class _DashBoardState extends State<DashBoard> {
             GestureDetector(
               onTap: () {
                 setState(() {
-                  currentScreen = Chat();
+                  currentScreen = Container(
+                    child: Center(
+                      child: Text("Coming Soon"),
+                    ),
+                  );
                   _currentTab = 3;
                   title = 'Chat';
                 });

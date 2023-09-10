@@ -1,4 +1,3 @@
-
 import 'package:carousel_nullsafety/carousel_nullsafety.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -257,7 +256,6 @@ Container secondComponentOfDetails(BuildContext context) {
 Container thirdComponentOfPhotos(BuildContext context) {
   return Container(
     height: MediaQuery.of(context).size.height * 0.28,
-
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -417,13 +415,15 @@ Container fifthComponent(BuildContext context) {
           height: 10,
         ),
         Container(
-          height: 200,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            color: Colors.red,
-          ),
-          child: LocationForHouseDetails(),
-        ),
+            height: 200,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              color: Colors.red,
+            ),
+            child: Text("Map Coming Soon")
+
+            // LocationForHouseDetails(),
+            ),
         SizedBox(
           height: 10,
         ),
@@ -458,49 +458,69 @@ Container sixthComponent(BuildContext context) {
         ),
         Center(
             child: Text(
-              'John Smith',
-              style: TextStyle(
-                  color: primaryColor, fontWeight: FontWeight.bold, fontSize: 18),
-            )),
+          'John Smith',
+          style: TextStyle(
+              color: primaryColor, fontWeight: FontWeight.bold, fontSize: 18),
+        )),
         Center(
             child: Text(
-              'Takaful Real Estate',
-              style: TextStyle(
-                  color: Colors.black,  fontSize: 14),
-            )),
-        SizedBox(height: 15,),
-        Row(mainAxisAlignment: MainAxisAlignment.center,
+          'Takaful Real Estate',
+          style: TextStyle(color: Colors.black, fontSize: 14),
+        )),
+        SizedBox(
+          height: 15,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               height: 40,
               width: 100,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-                color: Colors.grey[200]
-              ),
+                  borderRadius: BorderRadius.circular(20.0),
+                  color: Colors.grey[200]),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.phone_in_talk,color: primaryColor,size: 17,),
-                  SizedBox(width: 10,),
-                  Text('Call',style: TextStyle(fontWeight: FontWeight.bold),)
+                  Icon(
+                    Icons.phone_in_talk,
+                    color: primaryColor,
+                    size: 17,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Call',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )
                 ],
               ),
             ),
-            SizedBox(width: 30,),
+            SizedBox(
+              width: 30,
+            ),
             Container(
               height: 40,
               width: 100,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
-                  color: Colors.grey[200]
-              ),
+                  color: Colors.grey[200]),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.mail,color: primaryColor,size: 17,),
-                  SizedBox(width: 10,),
-                  Text('Message',style: TextStyle(fontWeight: FontWeight.bold),)
+                  Icon(
+                    Icons.mail,
+                    color: primaryColor,
+                    size: 17,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Message',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )
                 ],
               ),
             )

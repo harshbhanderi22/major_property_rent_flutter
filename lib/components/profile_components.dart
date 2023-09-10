@@ -3,8 +3,6 @@ import 'package:on_property/components/home_componets.dart';
 import 'package:on_property/utils/colorscheme.dart';
 import 'package:on_property/utils/constants.dart';
 
-
-
 List<String> prices = [
   '\$567,900',
   '\$335,900',
@@ -56,11 +54,11 @@ firstHalf(BuildContext context) {
           backgroundImage: AssetImage('assets/images/john.jpg'),
         ),
         Text(
-          'John Smith',
+          'Harsh Bhanderi',
           style: kh1,
         ),
         Text(
-          'New York,USA',
+          'Surat, India',
           style: TextStyle(color: Colors.grey),
         ),
         GestureDetector(
@@ -84,75 +82,75 @@ firstHalf(BuildContext context) {
           padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Divider(),
         ),
-        Container(
-          height: 40,
-          width: double.infinity,
-          margin: EdgeInsets.symmetric(horizontal: 30),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, 'Followers');
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '500',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      'Followers',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 30,
-              ),
-              GestureDetector(
-                onTap: (){
-                  Navigator.pushNamed(context, 'Properties');
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '60',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      'Properties',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 30,
-              ),
-              GestureDetector(
-                onTap:()=>Navigator.pushNamed(context, 'Following'),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '60',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      'Followings',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ),
+        // Container(
+        //   height: 40,
+        //   width: double.infinity,
+        //   margin: EdgeInsets.symmetric(horizontal: 30),
+        //   child: Row(
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     crossAxisAlignment: CrossAxisAlignment.center,
+        //     children: [
+        //       GestureDetector(
+        //         onTap: () {
+        //           Navigator.pushNamed(context, 'Followers');
+        //         },
+        //         child: Column(
+        //           mainAxisAlignment: MainAxisAlignment.center,
+        //           children: [
+        //             Text(
+        //               '500',
+        //               style: TextStyle(fontWeight: FontWeight.bold),
+        //             ),
+        //             Text(
+        //               'Followers',
+        //               style: TextStyle(color: Colors.grey),
+        //             ),
+        //           ],
+        //         ),
+        //       ),
+        //       SizedBox(
+        //         width: 30,
+        //       ),
+        //       GestureDetector(
+        //         onTap: (){
+        //           Navigator.pushNamed(context, 'Properties');
+        //         },
+        //         child: Column(
+        //           mainAxisAlignment: MainAxisAlignment.center,
+        //           children: [
+        //             Text(
+        //               '60',
+        //               style: TextStyle(fontWeight: FontWeight.bold),
+        //             ),
+        //             Text(
+        //               'Properties',
+        //               style: TextStyle(color: Colors.grey),
+        //             ),
+        //           ],
+        //         ),
+        //       ),
+        //       SizedBox(
+        //         width: 30,
+        //       ),
+        //       GestureDetector(
+        //         onTap:()=>Navigator.pushNamed(context, 'Following'),
+        //         child: Column(
+        //           mainAxisAlignment: MainAxisAlignment.center,
+        //           children: [
+        //             Text(
+        //               '60',
+        //               style: TextStyle(fontWeight: FontWeight.bold),
+        //             ),
+        //             Text(
+        //               'Followings',
+        //               style: TextStyle(color: Colors.grey),
+        //             ),
+        //           ],
+        //         ),
+        //       )
+        //     ],
+        //   ),
+        // ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Divider(),

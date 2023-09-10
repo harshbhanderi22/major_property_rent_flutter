@@ -31,13 +31,12 @@ class _SplashState extends State<Splash> {
   onDoneLoading() async {
     SharedPreferences _prefs = await SharedPreferences.getInstance();
     var status = _prefs.getBool('isLoggedIn') ?? false;
-    print(status);
+    
     // print(PreferencesKeys.token.isNotEmpty);
-    print("----------------2--------");
+   
 
     if (this.mounted) {
       if (status) {
-        print("----------------3--------");
         // Navigator.of(context).pushReplacement(
         //   MaterialPageRoute(
         //     builder: (BuildContext context) =>
